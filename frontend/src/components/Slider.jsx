@@ -117,13 +117,13 @@ export default function Slider(props) {
                 perMove: 3,
             },
             776: {
-                perPage: 2,
-                perMove: 1,
+                perPage: 3,
+                perMove: 3,
             },
-            576: {
+            550: {
                 perPage: 2,
-                perMove: 2,
-            },
+                perMove: 2, 
+            }
         },
     };
 
@@ -147,7 +147,7 @@ export default function Slider(props) {
                                                 <span>{book.title}</span>)}</strong>
                                     </div>
                                     <div className="text-center text-secondary">
-                                        {book.authors.substring(0, 25)}
+                                        {book.authors.substring(0, 13)}
                                     </div>
                                     <div className="text-center price">
                                         {book.retail_price_amount !== 0 ? (

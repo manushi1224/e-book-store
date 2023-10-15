@@ -105,9 +105,14 @@
     height: auto;
 }
 
-/* @media only screen and (max-width: 600px) {
-    .fiction-image {
-        height: 12rem;
-        width: auto;
+@media only screen and (max-width: 800px) {
+    .swiper-bed{
+        width: 10rem;
     }
-} */
+}
+
+@media only screen and (max-width: 400px) {
+    .swiper-bed{
+        width: 7rem;
+    }
+}
