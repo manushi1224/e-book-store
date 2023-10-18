@@ -4,22 +4,20 @@ from rest_framework.response import Response
 from rest_framework import status
 import requests
 from .models import Book
-from .serializers import BookSerializer, WishListSerializer, WishListDetailSerializer
-from django.views.decorators.csrf import csrf_exempt
+from .serializers import WishListSerializer, WishListDetailSerializer
 from rest_framework import generics
 from .models import Wishlist
 from user_api.models import AppUser
-from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
-
+from backend.settings import API_KEY
 
 class GoogleBooksSync(APIView):
     def get(self, request):
         # List of Google Books API URLs to fetch data from
         google_books_urls = [
-            "https://www.googleapis.com/books/v1/volumes?q=bestseller&filter=paid-ebooks&orderBy=relevance&saleability=FOR_SALE&maxResults=40&startIndex=0&key=AIzaSyC9yZTML6bIv25caKuzNbK0WfALPsOLzwU",
-            "https://www.googleapis.com/books/v1/volumes?q=bestseller&filter=paid-ebooks&orderBy=relevance&saleability=FOR_SALE&maxResults=40&startIndex=40&key=AIzaSyC9yZTML6bIv25caKuzNbK0WfALPsOLzwU",
-            "https://www.googleapis.com/books/v1/volumes?q=bestseller&filter=paid-ebooks&orderBy=relevance&saleability=FOR_SALE&maxResults=20&startIndex=80&key=AIzaSyC9yZTML6bIv25caKuzNbK0WfALPsOLzwU",
+            f'https://www.googleapis.com/books/v1/volumes?q=bestseller&filter=paid-ebooks&orderBy=relevance&saleability=FOR_SALE&maxResults=40&startIndex=0&key={API_KEY}',
+            f'https://www.googleapis.com/books/v1/volumes?q=bestseller&filter=paid-ebooks&orderBy=relevance&saleability=FOR_SALE&maxResults=40&startIndex=40&key={API_KEY}',
+            f'https://www.googleapis.com/books/v1/volumes?q=bestseller&filter=paid-ebooks&orderBy=relevance&saleability=FOR_SALE&maxResults=20&startIndex=80&key={API_KEY}',
         ]
 
         books = []  # List to store Book objects
