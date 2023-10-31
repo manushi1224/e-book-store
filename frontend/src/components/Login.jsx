@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import { Container, Button } from 'react-bootstrap';
-import { Link, Navigate, redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Alert from 'react-bootstrap/Alert';
 import Cookies from 'js-cookie';
 import SignUp from './Signup';

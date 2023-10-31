@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import { Card, Container } from "react-bootstrap";
@@ -7,7 +7,7 @@ import BookModal from "./BookModal";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { Alert, Space, message } from 'antd';
+import { message } from 'antd';
 
 export default function Slider(props) {
 
@@ -16,7 +16,6 @@ export default function Slider(props) {
     const [userProfile, setUserProfile] = useState();
     const [flag, setFlag] = useState(false)
     const [wishList, setWishlist] = useState()
-    const [bookID, setBookID ] = useState(0)
     const token = Cookies.get('jwt_token');
 
     useEffect(() => {
@@ -51,10 +50,19 @@ export default function Slider(props) {
         }
         fetchwishlist();
     }, [userProfile])
+
+    const isInWishlist = useCallback((bookID) => {
+        if (wishList) {
+          const wishListIds = wishList.map(item => item.id);
+          return wishListIds.includes(bookID);
+        }
+        return false;
+      }, [wishList]);
+      
     
     useEffect(() =>{
         isInWishlist();
-    },[wishList])
+    },[wishList, isInWishlist])
 
     const handleModal = (props) => {
         setModal(!modalOpen)
@@ -92,14 +100,6 @@ export default function Slider(props) {
         } catch (error) {
             console.log(error.message)
         }
-    }
-
-    const isInWishlist = (bookID) =>{
-        if (wishList) {
-            const wishListIds = wishList.map(item => item.id);
-            return wishListIds.includes(bookID);
-        }
-        return false;
     }
 
     const splideOptions = {

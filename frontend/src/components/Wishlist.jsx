@@ -3,10 +3,10 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 function Wishlist() {
-    const [bookData, setBookData] = useState([])
     const [userProfile, setUserProfile] = useState({});
     const token = Cookies.get('jwt_token');
     const [flag, setFlag] = useState(false)
+    console.log(flag)
 
     useEffect(() => {
         const fetchUserProfile = async () => {
