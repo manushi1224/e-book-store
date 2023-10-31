@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import '@splidejs/react-splide/css/splide.css';
+// import '@splidejs/react-splide/css/splide.css';
 import '@splidejs/splide/dist/css/splide.min.css';
 import "../style/Slider.css"
 import b5 from "../media/book5.png"
