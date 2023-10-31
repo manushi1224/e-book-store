@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from backend import settings
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -29,3 +31,6 @@ urlpatterns = [
     path('api/', include('book_api.urls')),
     path('api/token/', TokenObtainPairView.as_view(),name='token_obtain_pair'),
 ]
+
+if settings.DEBUG:
+       urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
