@@ -36,7 +36,8 @@ ALLOWED_HOSTS = ['localhost', 'manushi1224.pythonanywhere.com']
 #manually added cors_allowed_origins
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',  # Adjust this to match your React app's domain.
+    'http://localhost:3000',
+    'https://bookthetic.netlify.app'
 ]
 
 # CORS_ALLOW_CREDENTIALS = True
