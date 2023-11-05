@@ -2,3 +2,7 @@
   base = "frontend"
   publish = "build"
   command = "npm run build"
+[[redirects]]
+  from = "/api/*"
+  to = "http://manushi1224.pythonanywhere.com/api/:splat"
+  status = 200
