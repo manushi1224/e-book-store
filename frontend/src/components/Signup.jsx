@@ -40,7 +40,7 @@ function SignUp() {
     });
 
     try {
-      const response = await axios.post('http://localhost:8000/api/register/', formData);
+      const response = await axios.post('http://manushi1224.pythonanywhere.com/api/register/', formData);
       setSuccessShow(true)
       setShow(false)
       console.log('User registered:', response.data);

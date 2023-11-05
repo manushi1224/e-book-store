@@ -13,7 +13,7 @@ import Form from 'react-bootstrap/Form';
 // axios.defaults.withCredentials = true;
 
 // const axios = axios.create({
-//   baseURL: "http://127.0.0.1:8000"
+//   baseURL: "http://manushi1224.pythonanywhere.com"
 // });
 
 function NavTemp() {
@@ -25,7 +25,7 @@ function NavTemp() {
   const [password, setPassword] = useState('');
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/user")
+    axios.get("http://manushi1224.pythonanywhere.com/api/user")
     .then(function(res) {
       setCurrentUser(true);
     })
@@ -47,7 +47,7 @@ function NavTemp() {
   function submitRegistration(e) {
     e.preventDefault();
     axios.post(
-      "http://127.0.0.1:8000/api/register",
+      "http://manushi1224.pythonanywhere.com/api/register",
       {
         email: email,
         username: username,
@@ -55,7 +55,7 @@ function NavTemp() {
       }
     ).then(function(res) {
       axios.post(
-        "http://127.0.0.1:8000/api/login",
+        "http://manushi1224.pythonanywhere.com/api/login",
         {
           email: email,
           password: password
@@ -69,7 +69,7 @@ function NavTemp() {
   function submitLogin(e) {
     e.preventDefault();
     axios.post(
-      "http://127.0.0.1:8000/api/login",
+      "http://manushi1224.pythonanywhere.com/api/login",
       {
         email: email,
         password: password
@@ -82,7 +82,7 @@ function NavTemp() {
   function submitLogout(e) {
     e.preventDefault();
     axios.post(
-      "http://127.0.0.1:8000/api/logout",
+      "http://manushi1224.pythonanywhere.com/api/logout",
       {withCredentials: true}
     ).then(function(res) {
       setCurrentUser(false);

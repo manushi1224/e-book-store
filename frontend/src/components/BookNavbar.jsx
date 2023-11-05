@@ -19,7 +19,7 @@ export default function BookNav() {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/user/', {
+                const response = await axios.get('http://manushi1224.pythonanywhere.com/api/user/', {
                     headers: {
                         Authorization: `JWT ${token}`,
                     },

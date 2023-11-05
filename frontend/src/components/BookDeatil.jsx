@@ -15,7 +15,7 @@ const BookDeatil = ({ match }) => {
 
     useEffect(() => {
         axios
-            .get(`http://127.0.0.1:8000/api/search-book/${bookId}/`)
+            .get(`http://manushi1224.pythonanywhere.com/api/search-book/${bookId}/`)
             .then(response => {
                 console.log(response.data);
                 setBookDetail(response.data);

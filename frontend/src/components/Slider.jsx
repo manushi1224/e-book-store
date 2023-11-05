@@ -21,7 +21,7 @@ export default function Slider(props) {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/user/', {
+                const response = await axios.get('http://manushi1224.pythonanywhere.com/api/user/', {
                     headers: {
                         Authorization: `JWT ${token}`,
                     },
@@ -42,7 +42,7 @@ export default function Slider(props) {
         const fetchwishlist = async () =>{
             try {
                 console.log(userProfile)
-                const response = await axios.get(`http://127.0.0.1:8000/create_api/wishlistdetail/?user=${userProfile.id}`)
+                const response = await axios.get(`http://manushi1224.pythonanywhere.com/create_api/wishlistdetail/?user=${userProfile.id}`)
                 setWishlist(response.data)
             } catch (error) {
                 console.log(error.message)
@@ -75,7 +75,7 @@ export default function Slider(props) {
             books: bookId 
         }
         try {
-            const response = await axios.post('http://127.0.0.1:8000/create_api/wishlist/', wishlist)
+            const response = await axios.post('http://manushi1224.pythonanywhere.com/create_api/wishlist/', wishlist)
             // alert('book added to wishlist')
             message.success('book added to wishlist')
             window.location.reload()
@@ -93,7 +93,7 @@ export default function Slider(props) {
             books: bookId 
         }
         try {
-            const response = await axios.post('http://127.0.0.1:8000/create_api/deletewishlist/', wishlist)
+            const response = await axios.post('http://manushi1224.pythonanywhere.com/create_api/deletewishlist/', wishlist)
             console.log(response)
             message.warning('removed from wishlist')
             window.location.reload()

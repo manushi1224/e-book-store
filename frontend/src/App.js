@@ -80,7 +80,7 @@ export default App;
 // axios.defaults.withCredentials = true;
 
 // const client = axios.create({
-//   baseURL: "http://127.0.0.1:8000",
+//   baseURL: "http://manushi1224.pythonanywhere.com",
 //   headers: {
 //     "Access-Control-Allow-Origin": "*", // Allow any origin
 //     "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",

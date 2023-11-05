@@ -11,7 +11,7 @@ const FictionDetail = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/fiction-books/`)
+        axios.get(`http://manushi1224.pythonanywhere.com/api/fiction-books/`)
             .then(response => {
                 setBooks(response.data);
             })
