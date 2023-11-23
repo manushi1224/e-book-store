@@ -11,7 +11,7 @@ const FictionDetail = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://manushi1224.pythonanywhere.com/api/fiction-books/`)
+        axios.get(`https://manushi1224.pythonanywhere.com/api/fiction-books/`)
             .then(response => {
                 setBooks(response.data);
             })

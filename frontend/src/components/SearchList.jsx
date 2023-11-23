@@ -15,7 +15,7 @@ function SearchResult() {
     
     useEffect(() => {
         axios
-            .get(`http://manushi1224.pythonanywhere.com/api/book-search/?query=${query.bookName}`)
+            .get(`https://manushi1224.pythonanywhere.com/api/book-search/?query=${query.bookName}`)
             .then((response) => {
                 setResults(response.data);
                 setLoading(false);

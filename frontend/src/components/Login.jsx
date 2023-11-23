@@ -28,7 +28,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://manushi1224.pythonanywhere.com/api/token/', formData);
+      const response = await axios.post('https://manushi1224.pythonanywhere.com/api/token/', formData);
       setSuccessShow(true)
       setShow(false)
       const { access } = response.data;

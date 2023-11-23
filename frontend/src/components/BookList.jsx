@@ -7,7 +7,7 @@ function BookList(props) {
     const category = props.category
 
     useEffect(() => {
-        axios.get(`http://manushi1224.pythonanywhere.com/api/${category}/`)
+        axios.get(`https://manushi1224.pythonanywhere.com/api/${category}/`)
             .then(response => {
                 setBooks(response.data);
             })

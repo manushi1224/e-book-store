@@ -15,7 +15,7 @@ const BookDeatil = ({ match }) => {
 
     useEffect(() => {
         axios
-            .get(`http://manushi1224.pythonanywhere.com/api/search-book/${bookId}/`)
+            .get(`https://manushi1224.pythonanywhere.com/api/search-book/${bookId}/`)
             .then(response => {
                 console.log(response.data);
                 setBookDetail(response.data);

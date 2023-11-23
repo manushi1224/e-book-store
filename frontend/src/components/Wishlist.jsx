@@ -11,7 +11,7 @@ function Wishlist() {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await axios.get('http://manushi1224.pythonanywhere.com/api/user/', {
+                const response = await axios.get('https://manushi1224.pythonanywhere.com/api/user/', {
                     headers: {
                         Authorization: `JWT ${token}`,
                     },
@@ -32,7 +32,7 @@ function Wishlist() {
     const getWishListData = async () =>{
         try {
             console.log(userProfile)
-            const response = await axios.get(`http://manushi1224.pythonanywhere.com/create_api/wishlistdetail/?user=${userProfile.id}`)
+            const response = await axios.get(`https://manushi1224.pythonanywhere.com/create_api/wishlistdetail/?user=${userProfile.id}`)
             console.log(response)
         } catch (error) {
             console.log(error)

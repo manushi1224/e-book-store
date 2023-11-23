@@ -19,7 +19,7 @@ export default function BookNav() {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await axios.get('http://manushi1224.pythonanywhere.com/api/user/', {
+                const response = await axios.get('https://manushi1224.pythonanywhere.com/api/user/', {
                     headers: {
                         Authorization: `JWT ${token}`,
                     },
@@ -65,19 +65,19 @@ export default function BookNav() {
                                 query === '' || query === " " ?
                                     <Link to={`/`}>
                                         {console.log('hello')}
-                                        <button className="btn logbtn mx-2" type="submit">Search</button>
+                                        <button className="btn log-btn mx-2" type="submit">Search</button>
                                     </Link> :
                                     <Link to={`/search/${query}`}>
-                                        <button className="btn logbtn mx-2" type="submit">Search</button>
+                                        <button className="btn log-btn mx-2" type="submit">Search</button>
                                     </Link>
                             }
                         </Form>
                     </Navbar.Collapse>
                     {/* <Link to="/login"><Button variant="" onClick={handleLogout}>Log Out</Button></Link> */}
                     {flag ? (
-                        <Link to="/"><Button variant="" className="logbtn" onClick={() => handleLogout()}>Log Out <span className="text-decoration-underline fw-bold">{userProfile.username}</span></Button></Link>
+                        <Link to="/"><Button variant="" className="log-btn" onClick={() => handleLogout()}>Log Out <span className="text-decoration-underline fw-bold">{userProfile.username}</span></Button></Link>
                     ) : (
-                        <Link to="/login"><Button variant="" className="logbtn">Sign In</Button></Link>
+                        <Link to="/login"><Button variant="" className="log-btn">Sign In</Button></Link>
                     )}
                 </Container>
             </Navbar>
