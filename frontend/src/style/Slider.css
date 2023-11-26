@@ -113,6 +113,7 @@
 
 @media only screen and (max-width: 400px) {
     .swiper-bed{
-        width: 7rem;
+        width: 40vw;
+        height: 45vh;
     }
 }
