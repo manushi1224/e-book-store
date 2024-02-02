@@ -77,6 +77,7 @@
     z-index: 1 !important;
     background-color: #113946 !important;
     color: aliceblue !important;
+    width: 100% !important;
 }
 
 .card:hover .sci .scidetail {
@@ -106,13 +107,13 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .swiper-bed{
+    .swiper-bed {
         width: 10rem;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .swiper-bed{
+    .swiper-bed {
         width: 40vw;
         height: 45vh;
     }

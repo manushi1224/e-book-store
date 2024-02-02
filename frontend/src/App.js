@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Signup from './components/Signup';
-import Login from './components/Login';
-import Home from './pages/Home';
-import BookDeatil from './components/BookDeatil';
-import FictionDetail from './components/FictionDetail';
-import SearchResult from './components/SearchList';
-import UserProfile from './components/UserProfile';
-import Wishlist from './components/Wishlist';
+import Signup from './User/components/Signup';
+import Login from './User/components/Login';
+import Home from './Home/pages/Home';
+import BookDeatil from './Books/pages/BookDetail';
+import FictionDetail from './Books/components/FictionDetail';
+import SearchResult from './Home/components/SearchList';
+import UserProfile from './User/components/UserProfile';
+import Wishlist from './Books/pages/Wishlist';
 
 function App() {
   return (

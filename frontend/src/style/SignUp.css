@@ -6,7 +6,7 @@
 }
 
 .signIn {
-    background: url(https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/casino-background_2x);
+    background: url("../media/coffee-book.jpg");
     background-size: cover;
     height: 100vh;
     display: flex;
